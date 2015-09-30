@@ -13,15 +13,24 @@ npm install
 * 平行目录下载thinkjs
 
 ```
-cd .. && git clone -b es6 https://github.com/75team/thinkjs.git && npm install 
+cd .. 
+git clone -b es6 https://github.com/75team/thinkjs.git
+npm run compile
 ```
 
 * 建立软连接 
 
 ```
-ln -s . ../officialwebsite/node_modules/thinkjs 
+cd ../officialwebsite/node_modules
+ln -s ../../thinkjs thinkjs
 ```
 
 * 启动项目
+
+```
 npm run start
+```
+
+前台: [http://localhost:1234/](http://localhost:1234/)
+后台: [http://localhost:1234/admin/](http://localhost:1234/admin/)
 
