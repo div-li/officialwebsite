@@ -28,6 +28,7 @@ ln -s ../../thinkjs thinkjs
 * 启动项目
 
 ```
+cd ..
 npm run start
 ```
 
