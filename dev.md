@@ -22,6 +22,7 @@ npm run compile
 
 ```
 cd ../officialwebsite/node_modules
+# 请在unix下运行
 ln -s ../../thinkjs thinkjs
 ```
 
