@@ -7,7 +7,7 @@
 - 下载vagrant
 - cd到项目目录
 - 修改Vagrantfile文件box地址: `package.box`为` boxes/ubuntu/trusty64.box` 
-- 启动vagrant, 连接到ssh里面
+- 进入vagrant, ``` vagrant ssh```
 - 创建软链接
 
   ```bash
