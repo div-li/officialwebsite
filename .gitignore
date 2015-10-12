@@ -28,6 +28,7 @@ www/static/dist
 node_modules
 
 # IDE config
+
 .idea
 .DS_Store
 
