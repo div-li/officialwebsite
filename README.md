@@ -4,7 +4,7 @@
 - 下载安装[virtualbox](https://www.virtualbox.org/)
 - 下载安装[vagrant](https://www.vagrantup.com/downloads.html)
 - 下载项目文件 http://yunpan.cn/cFfMkACj4BkSI  访问密码 7daa
-- cd到项目目录，在www目录下clone代码，此时目录结构如下
+- cd到项目目录，在www目录下clone代码并切到dev分支，```git clone -b dev https://github.com/div-li/officialwebsite.git```此时目录结构如下：
 ```
 ├── Vagrantfile
 ├── package.box
