@@ -1,22 +1,25 @@
 
 ---
 ###开发说明
-
-- 下载http://yunpan.cn/cHCIT9MPGSUA7 （提取码：3725）
-- 下载安装virtualbox虚拟机程序
-- 下载vagrant
-- cd到项目目录
-- 修改Vagrantfile文件box地址: `package.box`为` boxes/ubuntu/trusty64.box` 
-- 进入vagrant, ``` vagrant ssh```
-- 创建软链接
-
-  ```bash
-  ln -s  ~/node_modules/ www/officialwebsite/node_modules/
-  ```
+- 下载安装[virtualbox](https://www.virtualbox.org/)
+- 下载安装[vagrant](https://www.vagrantup.com/downloads.html)
+- 下载项目文件 http://yunpan.cn/cFfMkACj4BkSI  访问密码 7daa
+- cd到项目目录，在www目录下clone代码，此时目录结构如下
+```
+├── Vagrantfile
+├── package.box
+└── www
+└──── officialwebsite
+```
+- 执行  ```vagrant up```
+- 进入vagrant ``` vagrant ssh```
+- 在虚拟机里创建软链接
+```
+  ln -s  ~/node_modules/ ~/www/officialwebsite/node_modules/
+```
 - 启动服务:
 
-  ```bash
-  node www/officialwebsite/www/index.js
-  ```
-
-- 在下载的项目目录里面初始化git，更新最新代码
+```bash
+node www/officialwebsite/www/index.js
+```
+- 访问 http://127.0.0.1:1234
