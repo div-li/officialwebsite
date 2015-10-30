@@ -1,26 +1,30 @@
 
----
-###开发说明
-- 下载安装[virtualbox](https://www.virtualbox.org/)
-- 下载安装[vagrant](https://www.vagrantup.com/downloads.html)
-- 下载项目文件 http://yunpan.cn/cFfMkACj4BkSI  访问密码 7daa
-- cd到项目目录，在www目录下clone代码，此时目录结构如下
-```
-├── Vagrantfile
-├── package.box
-└── www
-└──── officialwebsite
-```
-- 返回项目根目录
-- 执行  ```vagrant up```
-- 进入vagrant ``` vagrant ssh```
-- 在虚拟机里创建软链接
-```
-  ln -s  ~/node_modules www/officialwebsite/
-```
-- 启动服务:
+application created by [ThinkJS](http://www.thinkjs.org)
 
-```bash
-node www/officialwebsite/www/index.js
+## install dependencies
+
 ```
-- 访问 http://127.0.0.1:1234
+npm install
+```
+
+## watch-compile
+
+if create application with `--es6` paramter, must be compile code before start server.
+
+```
+npm run watch-compile
+```
+
+## start server
+
+```
+npm start
+```
+
+## deploy with pm2
+
+use pm2 to deploy app on production envrioment.
+
+```
+pm2 startOrGracefulReload pm2.json
+```

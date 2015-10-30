@@ -9,10 +9,21 @@ export default class extends think.controller.base {
    * @return {Promise}        []
    */
   displayErrorPage(status){
-    var file = `common/error/${status}.html`;
-    var options = this.config('tpl');
-    options = think.extend({}, options, {type: 'ejs'});
+    let module = 'common';
+    if(think.mode !== think.mode_module){
+      module = this.config('default_module');
+    }
+    let file = `${module}/error/${status}.html`;
+    let options = this.config('tpl');
+    options = think.extend({}, options, {type: 'ejs', file_depr: '_'});
     return this.display(file, options);
+  }
+  /**
+   * Bad Request 
+   * @return {Promise} []
+   */
+  _400Action(){
+    return this.displayErrorPage(400);
   }
   /**
    * Forbidden 
